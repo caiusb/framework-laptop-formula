@@ -52,7 +52,7 @@ framework-laptop:
   grub_recordfail_timeout:
     include: grub-decrease-menu-timeout
 
-    seconds: "1"
+    seconds: "30"
 
   hibernate:
     include: False
@@ -90,7 +90,7 @@ framework-laptop:
     suspend_then_hibernate:
 
       # The time it the computer stays suspended before it hibernates.
-      hibernate_delay_sec: 120min
+      hibernate_delay_sec: 30min
 
   hpet:
     include: False
@@ -127,8 +127,9 @@ framework-laptop:
   tlp:
     include: tlp
 
-  touchpad_suspend_workaround:
-    include: touchpad-suspend-workaround
+  # ignoring for now, as it makes the trackpad work weird
+  # touchpad_suspend_workaround:
+  #   include: touchpad-suspend-workaround
 
   salt:
     include: salt-masterless
